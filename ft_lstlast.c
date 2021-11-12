@@ -6,7 +6,7 @@
 /*   By: ripereir <ripereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 22:06:12 by ripereir          #+#    #+#             */
-/*   Updated: 2021/11/11 22:16:39 by ripereir         ###   ########.fr       */
+/*   Updated: 2021/11/12 18:29:26 by ripereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,8 @@ t_list	*ft_lstlast(t_list *lst)
 	t_list	*ls;
 
 	ls = lst;
-	if (ls == NULL)
+	if (!ls)
 		return (NULL);
-	if (ls->next == NULL)
-		return (ls);
 	while (ls != NULL)
 	{
 		if (ls->next == NULL)
