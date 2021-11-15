@@ -6,7 +6,7 @@
 #    By: ripereir <ripereir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/18 20:21:26 by ripereir          #+#    #+#              #
-#    Updated: 2021/11/12 20:24:03 by ripereir         ###   ########.fr        #
+#    Updated: 2021/11/15 17:41:42 by ripereir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,8 @@ BONUS =	ft_lstnew.c \
 		ft_lstadd_back.c \
 		ft_lstdelone.c \
 		ft_lstclear.c \
-		ft_lstiter.c
+		ft_lstiter.c \
+		ft_lstmap.c
 
 CC = gcc
 RM = rm -f
