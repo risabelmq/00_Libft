@@ -6,7 +6,7 @@
 #    By: ripereir <ripereir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/18 20:21:26 by ripereir          #+#    #+#              #
-#    Updated: 2021/11/16 18:41:30 by ripereir         ###   ########.fr        #
+#    Updated: 2021/11/16 19:43:56 by ripereir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,7 +75,7 @@ clean:
 	$(RM)   $(SRC:.c=.o)  $(BONUS:.c=.o)
 fclean: clean
 	$(RM)   $(NAME) $(BONUS:.c=.o)
-re:     fclean  $(NAME) $(BONUS:=.o)
+re:     fclean  $(NAME) $(BONUS.c:=.o)
 bonus:	$(NAME) $(BONUS:.c=.o)
 			ar rc $(NAME) $(BONUS:.c=.o)
 			ranlib $(NAME)
