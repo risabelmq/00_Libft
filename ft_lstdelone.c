@@ -6,7 +6,7 @@
 /*   By: ripereir <ripereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 19:39:42 by ripereir          #+#    #+#             */
-/*   Updated: 2021/11/12 20:24:01 by ripereir         ###   ########.fr       */
+/*   Updated: 2021/11/16 18:34:18 by ripereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (!del)
+	if (!lst)
 		return ;
-	if (lst != NULL)
-	{	
-		(*del)(lst->next);
-		free(lst);
-	}
+	del(lst->content);
+	free(lst);
 }

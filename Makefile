@@ -6,7 +6,7 @@
 #    By: ripereir <ripereir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/18 20:21:26 by ripereir          #+#    #+#              #
-#    Updated: 2021/11/15 17:41:42 by ripereir         ###   ########.fr        #
+#    Updated: 2021/11/16 18:41:30 by ripereir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,6 +61,10 @@ CC = gcc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror -I.
 
+TESTS	= tests/test1.c
+TNAME	= test
+TOBJS	= ${TESTS:.c=.o}
+
 all: $(NAME)
 
 $(NAME): $(SRC:.c=.o)
@@ -77,3 +81,6 @@ bonus:	$(NAME) $(BONUS:.c=.o)
 			ranlib $(NAME)
 norm : 
 	norminette -R CheckForbiddenSourceHeader *.c
+
+test: re ${TOBJS}
+	${CC} -g ${CFLAGS} ${TOBJS} -L. -lft -o ${TNAME}
